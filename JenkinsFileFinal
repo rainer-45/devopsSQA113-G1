@@ -18,19 +18,19 @@ pipeline{
 
          stage('Testing'){
             steps{
-            sh 'firebase deploy -P testing --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P testingsqafinalexam --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
 
         stage('Staging'){
             steps{
-            sh 'firebase deploy -P staging --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P stagingsqafinalexam --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
 
         stage('Production'){
             steps{
-            sh 'firebase deploy -P production --token "$FIREBASE_DEPLOY_TOKEN"'
+            sh 'firebase deploy -P productionsqafinalexam --token "$FIREBASE_DEPLOY_TOKEN"'
             }
         }
     }
